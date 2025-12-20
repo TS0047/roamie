@@ -1,5 +1,7 @@
 from smolagents import InferenceClientModel, CodeAgent,tool
+import os
 
+HF_API_KEY = os.getenv("HF_API_KEY")
 @tool
 def get_restaurant_recommendations(place:str)->list[str]:
     """
@@ -41,7 +43,7 @@ def get_restaurant_recommendations(place:str)->list[str]:
         return [f"Sorry, we don't have restaurant recommendations for {place} at the moment."]
     
 def restaurant_guide_bot(query: str) -> str:
-    agent = CodeAgent(tools=[get_restaurant_recommendations], model=InferenceClientModel(api_key="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"))
+    agent = CodeAgent(tools=[get_restaurant_recommendations], model=InferenceClientModel(api_key=HF_API_KEY))
 
     query = (
         "you are a restaurant guide bot. A user will provide you with a location to find restaurant recommendations."
