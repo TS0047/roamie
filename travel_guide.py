@@ -51,4 +51,3 @@ def travel_guide_bot(query: str) -> str:
     
     response = agent.run(query)
     return response
-print(travel_guide_bot("I am going to Goa and I love adventure"))
