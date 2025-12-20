@@ -45,10 +45,10 @@ def travel_guide_bot(query: str) -> str:
                 "you are a travel guide bot. A user will provide you with a travel query and their interests."
                 "Provide travel recommendations based on the provided information."
                 "if the get_travel_recommendations tool didnt give the specific recommendations, don't try to improvise and give your own suggestions."
-                "also add some funny and engaging comments to make the recommendations more lively."
+                "answer in str format such that a agentic ai can understand."
                 "the user query is: " + query
             )
     
     response = agent.run(query)
     return response
-
+print(travel_guide_bot("I am going to Goa and I love adventure"))
