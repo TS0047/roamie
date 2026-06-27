@@ -30,7 +30,6 @@ def get_travel_recommendations(destination: str, interests: str) -> str:
             "history": "Explore the colonial architecture in Old Goa.",
             "food": "Try local seafood dishes at a beachside restaurant.",
             "adventure": "Go paragliding over the scenic coastline.",
-            "Girls": "has many beautiful beaches filled with girls"
         }
     }
     
